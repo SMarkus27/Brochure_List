@@ -1,19 +1,17 @@
-// importa o arquivo das cervejas
-import ('js/beer.js')
-
 const sectionCenter = document.querySelector(".section-center");
 const container = document.querySelector(".btn-container");
 
-// quando a pagina carrega inicialmente mostra todos itens
+// when the page loads, it shows all items
 window.addEventListener("load", function () {
   showBeerItems(beer);
   showBeerBtns();
 });
 
-function showBeerItems(beerItems) {
-// varre o beer e cria o objeto item
+const showBeerItems = (beerItems) => {
+
+
   let showBeer = beerItems.map(function (item) {
-// retorna o article conforme as propriedades relacionadas  
+
     return `<article class="beer-item">
           <img src=${item.img} class="photo" alt=${item.title} />
           <div class="item-info">
@@ -22,17 +20,15 @@ function showBeerItems(beerItems) {
             </header>
             <p class="item-text">${item.desc}</p>
           </div>
-        </article>`;
+            </article>`;
     });
-// monta todas as informações obtidas pelo map
+
   showBeer = showBeer.join("");
   sectionCenter.innerHTML = showBeer;
-}
+} 
 
-function showBeerBtns() {
-// varre a beer e cria um array com categorias presentes no item
+const showBeerBtns = () => {
   const categories = beer.reduce(
-// values recebe as categorias, 
 // all é setado como valor inicial, pois nao existe no beer
     function (values, item) {
       if (!values.includes(item.category)) {
