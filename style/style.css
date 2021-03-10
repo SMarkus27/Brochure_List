@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 :root{
-    --color-p:rgb(14, 25, 61);
+    --color-p:whitesmoke;
     --transition:all 0.3s linear;
     --color-btn:#e99a28;
 }
 body{
-    background: #fafafa;
+    background: #2c3e50;
     font-family: cursive;
     line-height: 1.5;
     font-size: 0.875rem;
@@ -23,6 +23,7 @@ h4 {
     line-height: 1.25;
     margin-bottom: 0.75rem;
     font-family: cursive;
+    color: whitesmoke;
 }
 h1 {
     font-size: 3rem;
